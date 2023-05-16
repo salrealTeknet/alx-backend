@@ -10,7 +10,7 @@ from typing import Dict, Tuple, List
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
-	index range for list
+    index range for list
     """
     return ((page_size * page) - page_size, (page_size * page))
 
@@ -37,7 +37,6 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
         paginates dataset using index range and returns empty list if its 0
-        
         """
         self.dataset()
         assert isinstance(page, int) and isinstance(page_size, int)
@@ -50,7 +49,8 @@ class Server:
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
-        this generates a dictionary with hypermedia information related pagination
+        this generates a dictionary with hypermedia information related
+        pagination
         """
         hyper = {}
         try:
